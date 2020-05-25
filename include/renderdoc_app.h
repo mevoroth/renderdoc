@@ -673,6 +673,11 @@ typedef struct
 //   1 - if the outAPIPointers has been filled with a pointer to the API struct requested
 //   0 - if the requested version is not supported or the arguments are invalid.
 //
+namespace RENDERDOC_GetAPIResult
+{
+	constexpr int FAILURE = 0;
+	constexpr int SUCCESS = 1;
+};
 typedef int(RENDERDOC_CC *pRENDERDOC_GetAPI)(RENDERDOC_Version version, void **outAPIPointers);
 
 #ifdef __cplusplus
